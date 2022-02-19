@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
+    <router-link to="/first-question">Next</router-link>
   </div>
 </template>
 
@@ -15,4 +15,10 @@ export default {
     HelloWorld,
   },
 };
+
 </script>
+
+<style scoped>
+
+</style>
+
