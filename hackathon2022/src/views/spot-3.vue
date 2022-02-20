@@ -5,7 +5,16 @@
         <h1>This is your MOODSPOT.</h1>
         
         <div id="spotCard">
-          <p>{{spot.name}}</p>
+          <img v-if="spot.type === 'park'" src="../img/Verysad3.gif" alt="">
+          <img v-else-if="spot.type === 'cafe'" src="../img/Blue3.gif" alt="">
+          <img v-else-if="spot.type === 'recreation_center'" src="../img/Soso3.gif" alt="">
+          <img v-else-if="spot.type === 'restaurant'" src="../img/Good3.gif" alt="">
+          <img v-else-if="spot.type === 'finedining_restaurant'" src="../img/Happy3.gif" alt="">
+          
+          <p>{{spot.name}}</p><br>
+          <p>{{spot.address}}</p><br>
+          <p>{{spot.description}}</p><br>
+          <p>{{spot.message}}</p><br>
         </div>
       </div>
   <div class="button" type="submit">

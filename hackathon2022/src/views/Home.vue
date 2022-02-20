@@ -4,7 +4,8 @@
     <div v-else class="container">
       <div class="main-writing">
         <h1>MOOD SPOT</h1>
-        <h2>Check Your Mood, Find Your Spot</h2>
+        <h2 v-if="userNameRegistered()">HELLO</h2>
+        <h2 v-else>{{ name }}</h2>        <h2>Check Your Mood, Find Your Spot</h2>
       </div>
       <div class="button" v-if="userNameRegistered()">
         <router-link to="/login"><NextBtn msg="START" /></router-link>
@@ -32,6 +33,7 @@ export default {
   data() {
     return {
       loadingOn: true,
+      name: "HELLO " + localStorage.username 
     };
   },
   mounted() {

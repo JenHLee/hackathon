@@ -8,14 +8,12 @@
         <img src="../img/c-img1.gif" class="c-img" />
       </div>
       <div class="button">
-        <selectbutton msg="WORK" />
-        <selectbutton msg="STUDIES" />
-        <selectbutton msg="RELATIONSHIP" />
-        <selectbutton msg="RELAXING" />
-        <selectbutton msg="MUSIC" />
-        <selectbutton msg="FOOD" />
-        <selectbutton msg="FRIENDS" />
-        <selectbutton msg="MORE" />
+        <selectbutton
+          v-for="emotion in emotions"
+          :key="emotion"
+          :emotion="emotion"
+          v-on:change="changeColor"
+        />
       </div>
     </div>
     <div class="button">
@@ -40,9 +38,23 @@ export default {
   },
   data() {
     return {
-       name: localStorage.username
+       name: localStorage.username,
+       emotions: [
+         {type: "WORK", answer: false},
+         {type: "STUDY", answer: false},
+         {type:"RELAXING", answer: false},
+         {type:"MUSIC", answer: false},
+         {type:"FOOD", answer: false},
+         {type:"FRIENDS", answer: false},
+         {type:"FRIENDS", answer: false}
+        ]
     };
   },
+  methods: {
+    changeColor: function(emotion) {
+      emotion.answer = !emotion.answer
+    }
+  }
 };
 </script>
 
@@ -89,4 +101,6 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+
 </style>
