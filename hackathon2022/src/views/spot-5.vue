@@ -29,13 +29,23 @@ export default {
     data() {
         return {
             spots:[],
-            spot: ""
+            spot: {
+    "name": "There is no more",
+    "type": "",
+    "address": "",
+    "description": "",
+    "message": ""
+}
         };
     },
     async mounted(){
         const response = await axios.get("api/allspots");
         this.spots = response.data;
-        this.spot = this.spots[4];
+        if(!this.spots[4]){
+          return;
+        }else{
+          this.spot = this.spots[4];
+        }
         console.log(this.spot);
     },
     methods:{
