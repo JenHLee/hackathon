@@ -5,7 +5,10 @@
         <h1>This is your MOODSPOT.</h1>
         
         <div id="spotCard">
-          <p>{{spot.name}}</p>
+          <p>{{spot.name}}</p><br>
+          <p>{{spot.address}}</p><br>
+          <p>{{spot.description}}</p><br>
+          <p>{{spot.message}}</p><br>
         </div>
       </div>
        <div class="button" type="submit">
