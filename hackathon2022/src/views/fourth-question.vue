@@ -12,6 +12,7 @@
           /></router-link>
         </div>
       </div>
+<<<<<<< HEAD
       <div class="content" v-if="answer">
         <textarea
           cols="0"
@@ -27,6 +28,13 @@
         <router-link to="/fifth-question"
           ><HelloWorld msg="Next"
         /></router-link>
+=======
+      <div class="button">
+        <selectbutton msg="Yes" />
+        <router-link to="/fifth-question">
+          <selectbutton msg="NO" v-on:click="answer = false" /></router-link>
+        <router-link to="/fifth-question"><HelloWorld msg="Next"/></router-link>
+>>>>>>> f3ba9b0d0edc068db8a2d7458481b2f0086a3f61
         <router-view />
       </div>
     </div>
