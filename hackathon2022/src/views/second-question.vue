@@ -1,9 +1,18 @@
 <template>
   <div class="second">
-    <h1>2</h1>
-    <router-link to="/third-question"><HelloWorld  /></router-link>
-    <questionCard />
-    <router-view />
+    <div class="container">
+      <div class="second-qustion-box">
+        <questionCard question="how is your day" />
+      </div>
+      <div class="button">
+        <router-link to="/third-question"><HelloWorld msg="Next" /></router-link>
+        <router-view />
+        <HelloWorld msg="Next" />
+        <HelloWorld msg="Next" />
+        <HelloWorld msg="Next" />
+        <HelloWorld msg="Next" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -19,5 +28,38 @@ export default {
     questionCard
   },
 };
-
 </script>
+
+<style scoped>
+
+.second {
+  box-sizing: border-box;
+  height: 100vh;
+  background: url("../img/bg-1.gif");
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem;
+}
+
+.second-qustion-box {
+  background-color: brown;
+  flex: 4;
+  padding: 15vw;
+}
+
+.button {
+  flex: 2;
+  margin: 2rem;
+  background-color: bisque;
+  text-align: center;
+}
+
+
+</style>

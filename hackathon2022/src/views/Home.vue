@@ -2,9 +2,6 @@
   <div class="home">
     <div class="container">
       <div class="home-image">
-        <hi>sdfsfsfsfsdfdsfsf</hi>
-        <br />
-        <hi>sdfsfsfsfsdfdsfsf</hi>
       </div>
       <div class="button">
         <router-link to="/first-question"><HelloWorld msg="Start" /></router-link>
@@ -17,10 +14,11 @@
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
 
+
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    HelloWorld
   },
 };
 </script>

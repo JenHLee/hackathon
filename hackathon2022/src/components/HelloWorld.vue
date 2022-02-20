@@ -15,7 +15,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
   button {
     text-decoration: none;
     color: inherit;
@@ -27,7 +26,6 @@ export default {
     text-align: center;
     padding: 3vh 10vh;
   }
-
   button:hover {
     background-color: #f2f3ae;
     color: #020122;

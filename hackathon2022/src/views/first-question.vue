@@ -2,9 +2,8 @@
   <div class="first">
     <div class="container">
       <div class="first-qustion-box">
-        <img :src="icon" />
-        <input type="range" id="volume" name="volume" min="0" max="4" step="1"  v-model="value" @change="changeIcon" />
-        <span v-text="total"></span>
+        <img :src="changeIcon(pic)" />
+        <input type="range" id="volume" name="volume" min="0" max="4" step="1"  v-model="value" v-on:change="changeIcon"/>
       </div>
       <div class="button">
         <router-link to="/second-question"><HelloWorld msg="Next" /></router-link>
@@ -25,16 +24,21 @@ export default {
   },
   data() {
     return {
-      value: 3,
-      icon: require('../img/icon0.svg')
+      value: 3
     }
   },
-  computed: {
-    changeIcon: function() {
-      if (this.value == 1) {
-        icon= require('../img/icon25.svg');
-      } else if (this.value == 2) {
-        icon= require('../img/icon50.svg');
+  methods: {
+    changeIcon: function () {
+      if (this.value == 0) {
+        return require('@/img/icon0.svg')
+      } else if (this.value == 1){
+        return require('@/img/icon25.svg')
+      } else if (this.value == 2){
+        return require('@/img/icon50.svg')
+      } else if (this.value == 3){
+        return require('@/img/icon75.svg')
+      } else {
+        return require('@/img/icon100.svg')
       }
     }
   }
