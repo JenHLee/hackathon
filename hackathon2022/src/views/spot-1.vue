@@ -4,6 +4,7 @@
       <div class="spot-1-question-box">
         <h1>This is your MOODSPOT.</h1>
         
+          
         <div id="spotCard">
           <img v-if="spot.type === 'park'" src="../img/Verysad1.gif" alt="">
           <img v-else-if="spot.type === 'cafe'" src="../img/Blue1.gif" alt="">
@@ -38,8 +39,7 @@ export default {
     data() {
         return {
             spots:[],
-            spot: "",
-            url:""
+            spot: ""
         };
     },
     async mounted(){
@@ -47,21 +47,9 @@ export default {
         this.spots = response.data;
         this.spot = this.spots[0];
         console.log(this.spot);
-        if(this.spot.type === "park"){
-          this.url = "../img/Verysad-flanders_Park.gif"
-        }else if(this.spot.type === "cafe"){
-          this.url = "../img/Blue-alchemist_Inc.gif"
-        }else if(this.spot.type === "recreation_center"){
-          this.url = "../img/Soso-Glenmore_Sailing_School.gif"
-        }else if(this.spot.type === "restaurant"){
-          this.url = "../img/Good-Boogie.gif"
-        }else if(this.spot.type === "finedining_restaurant"){
-          this.url = "../img/Happy-Ari.gif"
-        }
-        console.log(this.url);
     },
     methods:{
-        
+
     }
 };
 </script>
@@ -77,7 +65,6 @@ export default {
   justify-content: center;
   align-content: center;
 }
-
 
 .container {
   display: flex;
@@ -100,6 +87,13 @@ export default {
     margin: 2rem;
     text-align: center;
 }
+
+p {
+  font-size: 2vw;
+  font-weight: bold;
+  margin: 1vw;
+}
+
 
 
 </style>
