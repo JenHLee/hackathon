@@ -46,6 +46,7 @@ export default {
   display: flex;
   justify-content: center;
   align-content: center;
+  background-size: cover;
 }
 
 .container {

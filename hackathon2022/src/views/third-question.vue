@@ -5,14 +5,21 @@
         <h1>Would you like to elaborate on this?</h1>
         <div class="button-1">
           <selectbutton msg="YES" v-on:click="answer = true" />
-          <selectbutton msg="NO" v-on:click="answer = false" />
+          <router-link to="/fourth-question"><selectbutton msg="NO" v-on:click="answer = false" /></router-link>
         </div>
       </div>
-      <div class="content" v-if="answer"> 
-        <textarea cols="0" rows="7" class="content-input" v-model="text"></textarea>
-        <button class="submit-button" v-on:click="showNextButton()">submit</button>
+      <div class="content" v-if="answer">
+        <textarea
+          cols="0"
+          rows="10"
+          class="content-input"
+          v-model="text"
+        ></textarea>
+        <button class="submit-button" v-on:click="showNextButton()">
+          submit
+        </button>
       </div>
-      <div id="nextButton" v-else>
+      <div id="nextButton" v-if="answer">
         <router-link to="/fourth-question"
           ><HelloWorld msg="Next"
         /></router-link>
@@ -36,14 +43,9 @@ export default {
   data() {
     return {
       answer: false,
-      message: ""
+      message: "",
     };
-  },
-  mehotds: {
-    showNextButton: function() {
-      
-    }
-  },
+  }
 };
 </script>
 
@@ -56,6 +58,7 @@ export default {
   display: flex;
   justify-content: center;
   align-content: center;
+  background-size: cover;
 }
 
 .container {
@@ -75,6 +78,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 3rem;
 }
 
 .content {
@@ -122,7 +126,6 @@ export default {
 #nextButton {
   margin: auto;
 }
-
 </style>
 
  
