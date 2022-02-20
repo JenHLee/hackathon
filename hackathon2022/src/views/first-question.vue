@@ -2,7 +2,7 @@
 <div class="first">
     <div class="container">
         <div class="first-qustion-box">
-            <h1>How are you today?</h1>
+            <h1>{{ name }} How are you today?</h1>
         </div>
         <div class="moodrange">
             <img :src="changeIcon(pic)" />
@@ -15,8 +15,6 @@
             </router-link>
             <router-view />
         </div>
-        {{ value }}
-        {{ emotion }}
     </div>
 </div>
 </template>
@@ -34,8 +32,9 @@ export default {
         return {
             value: 2,
             emotion: "sdfsfs",
-            answer:"",
-            type:""
+            name: localStorage.username
+
+
         };
     },
     methods: {

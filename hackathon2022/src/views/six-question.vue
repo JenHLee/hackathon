@@ -2,7 +2,7 @@
 <div class="six">
     <div class="container">
         <div class="six-qustion-box">
-            <h1>Would you like me to show you a special place that'll help you get calm and mindful at any moment?</h1>
+            <h1>{{ name }} Would you like me to show you a special place that'll help you get calm and mindful at any moment?</h1>
             <div class="button-1">
                 <router-link to="/spot-1">
                     <selectbutton msg="YES" v-on:click="answer = true" />
@@ -25,6 +25,11 @@ export default {
     name: "six",
     components: {
         selectbutton,
+    },
+    data() {
+        return {
+            name: localStorage.username
+        };
     },
 };
 </script>

@@ -2,7 +2,7 @@
 <div class="fourth-yes">
     <div class="container">
         <div class="fourth-yes-qustion-box">
-            <h1>
+            <h1>{{ name }}
                 What happend at {{ fourthAnswerQuestion }}?<br>
                 Can you tell me more ?</h1>
         </div>
@@ -29,6 +29,11 @@ export default {
     components: {
         HelloWorld,
     },
+    data() {
+    return {
+       name: localStorage.username
+    };
+  },
 };
 </script>
 
