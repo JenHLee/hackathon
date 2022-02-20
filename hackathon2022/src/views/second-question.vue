@@ -12,7 +12,7 @@
           v-for="emotion in emotions"
           :key="emotion"
           :emotion="emotion"
-          v-on:click="answerButton()"
+          v-on:change="changeColor"
         />
       </div>
     </div>
@@ -40,15 +40,20 @@ export default {
     return {
        name: localStorage.username,
        emotions: [
-         {type: "WORK"},
-         {type: "STUDY"},
-         {type:"RELAXING"},
-         {type:"MUSIC"},
-         {type:"FOOD"},
-         {type:"FRIENDS"},
-         {type:"FRIENDS"}
+         {type: "WORK", answer: false},
+         {type: "STUDY", answer: false},
+         {type:"RELAXING", answer: false},
+         {type:"MUSIC", answer: false},
+         {type:"FOOD", answer: false},
+         {type:"FRIENDS", answer: false},
+         {type:"FRIENDS", answer: false}
         ]
     };
+  },
+  methods: {
+    changeColor: function(emotion) {
+      emotion.answer = !emotion.answer
+    }
   }
 };
 </script>
@@ -96,4 +101,6 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+
 </style>

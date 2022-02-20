@@ -1,6 +1,7 @@
 <template>
-  <div class="selectbutton">
-    <button>{{ emotion.type }}</button>
+  <div class="selectbutton" v-on:click="() => $emit('change', emotion)">
+    <button class="no" v-if="!emotion.answer">{{ emotion.type }}</button>
+    <button class="yes" v-else>{{ emotion.type }}</button>
   </div>
 </template>
 
@@ -10,11 +11,12 @@ export default {
   props: {
     emotion: String,
   },
+  
 };
 </script>
 
 <style scoped>
-  button {
+  .no {
     text-decoration: none;
     color: inherit;
     font-weight: bold;
@@ -28,7 +30,17 @@ export default {
     margin: 0.5rem;
   }
 
-  button:hover {
+  .yes {
     background-color: #DAA520;
+    border: 0;
+    border-radius: 30px;
+    text-align: center;
+    width: 10rem;
+    height: 3rem;
+    margin: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    color: #191970;
   }
 </style>
