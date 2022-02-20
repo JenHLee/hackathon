@@ -1,5 +1,7 @@
 # hackathon
 
-Hello
+npm install
 
-I am Seoyoung 
+npm run build
+
+npm run dev
