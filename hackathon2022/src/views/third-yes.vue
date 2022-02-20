@@ -28,15 +28,12 @@ export default {
     components: {
         HelloWorld,
     },
-<<<<<<< HEAD
-    
-=======
     data() {
     return {
        name: localStorage.username
     };
   },
->>>>>>> bba217b1ffd6fc73b71cc99595f4c2d388dab07b
+
 };
 </script>
 
