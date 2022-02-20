@@ -6,7 +6,8 @@
       </div>
       <div class="button">
         <selectbutton msg="Yes" />
-        <selectbutton msg="No" />
+        <router-link to="/fifth-question">
+          <selectbutton msg="NO" v-on:click="answer = false" /></router-link>
         <router-link to="/fifth-question"><HelloWorld msg="Next"/></router-link>
         <router-view />
       </div>
