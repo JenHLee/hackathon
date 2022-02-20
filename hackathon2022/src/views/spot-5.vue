@@ -5,7 +5,7 @@
         <h1>This is your MOODSPOT.</h1>
         
         <div v-if="spot.type === ''" id="spotCard" >
-          <p>There is no more</p>
+          <h2>Sorry, we don't have more...</h2>
         </div>
         <div v-else id="spotCard">
           <img v-if="spot.type === 'park'" src="../img/Verysad1.gif" alt="">
