@@ -1,20 +1,20 @@
 <template>
-<div class="third">
+  <div class="third">
     <div class="container">
-        <div class="third-qustion-box">
-            <h1>Would you like to elaborate on this?</h1>
-            <div class="button-1">
-                <router-link to="/third-yes">
-                    <selectbutton msg="YES" v-on:click="answer = true" />
-                </router-link>
-                <router-link to="/fourth-question">
-                    <selectbutton msg="NO" v-on:click="answer = false" />
-                </router-link>
-                <router-view />
-            </div>
+      <div class="third-qustion-box">
+        <h1>Would you like to elaborate on this?</h1>
+        <div class="button-1">
+          <router-link to="/third-yes">
+            <selectbutton msg="YES" v-on:click="answer = true" />
+          </router-link>
+          <router-link to="/fourth-question">
+            <selectbutton msg="NO" v-on:click="answer = false" />
+          </router-link>
+          <router-view />
         </div>
+      </div>
     </div>
-</div>
+  </div>
 </template>
 
 <script>
@@ -22,23 +22,14 @@
 import selectbutton from "@/components/selectbutton.vue";
 
 export default {
-    name: "third",
-    components: {selectbutton},
+  name: "third",
+  components: { selectbutton },
 };
 </script>
 
 <style scoped>
 .third {
-<<<<<<< HEAD
-  box-sizing: border-box;
-  height: 100vh;
-  background: url("../img/bg-1.gif");
-  background-size: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  background-size: cover;
-=======
+
     padding-top: 12%;
     box-sizing: border-box;
     height: 100vh;
@@ -48,7 +39,7 @@ export default {
     justify-content: center;
     align-content: center;
     background-size: cover;
->>>>>>> 5b5b67d30da1884f3eca504ad81c1b945c1a8f7a
+
 }
 
 .container {
@@ -72,53 +63,4 @@ export default {
 
 }
 
-<<<<<<< HEAD
-.content {
-    background-color: bisque;
-    border-radius: 0.5rem;
-    padding: 0.75rem 1rem 0.25rem;
-    text-align: right;
-}
-
-.content-input {
-    width: 100%;
-    background-color: bisque;
-    border: none;
-    outline: none;
-    padding: 0.25rem 0.5rem 0.5rem 0;
-}
-
-.button {
-    display: flex;
-    flex: 2;
-    margin: auto;
-    text-align: center;
-    max-width: 30rem;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.submit-button {
-    text-decoration: none;
-    color: inherit;
-    color: white;
-    background: goldenrod;
-    border: 0;
-    border-radius: 10px;
-    text-align: center;
-    padding: 0.5rem 1rem;
-}
-
-.submit-button:hover {
-    background-color: #f2f3ae;
-    color: #020122;
-}
-
-#nextButton {
-  margin: auto;
-}
-
-=======
->>>>>>> 5b5b67d30da1884f3eca504ad81c1b945c1a8f7a
 </style>
