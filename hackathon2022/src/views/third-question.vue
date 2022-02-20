@@ -23,10 +23,13 @@ import NextBtn from "@/components/NextBtn.vue";
 
 export default {
     name: "third",
-    components: {NextBtn},
+    components: {
+        NextBtn
+    },
     data() {
     return {
-       name: localStorage.username
+       name: localStorage.username,
+       answer: false
     };
   },
 };

@@ -28,6 +28,7 @@ export default {
     width: 10rem;
     height: 3rem;
     margin: 0.5rem;
+    
   }
 
   .yes {

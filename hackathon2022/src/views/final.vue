@@ -3,7 +3,7 @@
     <div class="container">
         <div class="main-writing">
             <h1>Bye {{ name }},</h1>
-            <h2>Hope you have a wonderful day!</h2>
+            <h2>Hope you have a moodful day!</h2>
         </div>
     </div>
 </div>

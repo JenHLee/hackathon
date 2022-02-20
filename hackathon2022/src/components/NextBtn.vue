@@ -26,7 +26,8 @@ export default {
     align-items: center;
     width: 10rem;
     height: 4rem;
-    margin-top: 2rem
+    margin-top: 2rem;
+    margin: 1rem;
   }
   button:hover {
     background-color:  #7ed0df;

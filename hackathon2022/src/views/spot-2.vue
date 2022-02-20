@@ -2,7 +2,7 @@
   <div class="spot-2">
     <div class="container">
       <div class="spot-2-question-box">
-        <h1>This is your MOODSPOT.</h1>
+        <h1>This is your MOOD SPOT.</h1>
         
         <div id="spotCard">
           <img v-if="spot.type === 'park'" src="../img/Verysad2.gif" alt="">
@@ -11,10 +11,10 @@
           <img v-else-if="spot.type === 'restaurant'" src="../img/Good2.gif" alt="">
           <img v-else-if="spot.type === 'finedining_restaurant'" src="../img/Happy2.gif" alt="">
           
-          <p>{{spot.name}}</p><br>
-          <p>{{spot.address}}</p><br>
-          <p>{{spot.description}}</p><br>
-          <p>{{spot.message}}</p><br>
+    <p id="spot_name">{{spot.name}}</p><br>
+          <p id="spot_add">{{spot.address}}</p><br>
+          <p id="spot-des">{{spot.description}}</p><br>
+          <p id="spot-msg">{{spot.message}}</p><br>
         </div>
       </div>
      <div class="button" type="submit">
@@ -54,6 +54,10 @@ export default {
 </script>
 <style scoped>
 
+h1{
+  font-weight: bold;
+}
+
 .spot-2 {
   box-sizing: border-box;
   height: 100vh;
@@ -73,6 +77,7 @@ export default {
 
 .spot-2-question-box {
   background-color: antiquewhite;
+  border-radius: 50px;
   text-align: center;
   flex: 4;
   width: 40rem;
@@ -85,6 +90,16 @@ export default {
     text-align: center;
 }
 
+p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.5px;
+}
+
+
+img{
+  width: 20vw;
+}
 
 
 </style>
