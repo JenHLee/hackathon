@@ -15,6 +15,8 @@
             </router-link>
             <router-view />
         </div>
+        {{ value }}
+        {{ emotion }}
     </div>
 </div>
 </template>
@@ -59,16 +61,6 @@ export default {
 
 <style scoped>
 .first {
-<<<<<<< HEAD
-  box-sizing: border-box;
-  height: 100vh;
-  background: url("../img/bg-1.gif");
-  background-size: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  background-size: cover;
-=======
     box-sizing: border-box;
     height: 100vh;
     background: url("../img/bg-1.gif");
@@ -76,7 +68,7 @@ export default {
     display: flex;
     justify-content: center;
     align-content: center;
->>>>>>> 90d39548b592219636d640f3f7cca165e93e5afd
+    background-size: cover;
 }
 
 .container {

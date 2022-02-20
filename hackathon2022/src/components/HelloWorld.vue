@@ -16,14 +16,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   button {
+    font-size: 3rem;
     color: inherit;
-    font-weight: bold;
     color: #020122;
     background-color:#f2f3ae;
     border: 0;
-    border-radius: 30px;
+    border-radius: 100px;
     text-align: center;
-    padding: 3vh 10vh;
+    width: 4rem;
+    height: 4rem;
     margin-top: 2rem;
   }
   button:hover {
