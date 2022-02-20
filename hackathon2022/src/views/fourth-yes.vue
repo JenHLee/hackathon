@@ -1,8 +1,10 @@
 <template>
-<div class="third-yes">
+<div class="fourth-yes">
     <div class="container">
-        <div class="third-yes-qustion-box">
-            <h1>Would you like to elaborate on this?</h1>
+        <div class="fourth-yes-qustion-box">
+            <h1>
+                What happend at {{ fourthAnswerQuestion }}?<br>
+                Can you tell me more ?</h1>
         </div>
         <div class="content">
             <textarea cols="0" rows="10" class="content-input" v-model="text"></textarea>
@@ -10,11 +12,10 @@
         </div>
     </div>
     <div id="nextButton">
-        <router-link to="/fourth-question">
+        <router-link to="/fifth-question">
             <HelloWorld msg=">" />
         </router-link>
         <router-view />
-
     </div>
 </div>
 </template>
@@ -24,7 +25,7 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-    name: "third-yes",
+    name: "fourth-yes",
     components: {
         HelloWorld,
     },
@@ -32,7 +33,7 @@ export default {
 </script>
 
 <style scoped>
-.third-yes {
+.fourth-yes {
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
@@ -51,7 +52,7 @@ export default {
     padding-left: 28%;
 }
 
-.third-yes-qustion-box {
+.fourth-yes-qustion-box {
     text-align: center;
     flex: 4;
     width: 40rem;
@@ -101,6 +102,5 @@ export default {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 </style>

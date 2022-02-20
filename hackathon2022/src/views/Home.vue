@@ -7,7 +7,7 @@
         <h2>Check Your Mood, Find Your Spot</h2>
       </div>
       <div class="button">
-        <router-link to="/login"><HelloWorld msg="Start" /></router-link>
+        <router-link to="/login"><NextBtn msg="START" /></router-link>
       </div>
     </div>
   </div>
@@ -15,13 +15,13 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import NextBtn from "@/components/NextBtn.vue";
 import loading from "@/components/loading.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    NextBtn,
     loading,
   },
   data() {

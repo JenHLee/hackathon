@@ -2,7 +2,7 @@
 <div class="first">
     <div class="container">
         <div class="first-qustion-box">
-            <h1>Welcome{{}}, how are you today?</h1>
+            <h1>How are you today?</h1>
         </div>
         <div class="moodrange">
             <img :src="changeIcon(pic)" />
@@ -11,7 +11,7 @@
         </div>
         <div class="button">
             <router-link to="/second-question">
-                <HelloWorld msg="Next" />
+                <HelloWorld msg=">" />
             </router-link>
             <router-view />
         </div>
@@ -32,10 +32,11 @@ export default {
     },
     data() {
         return {
-            value: 3,
+            value: 2,
             emotion: "sdfsfs",
         };
     },
+
     methods: {
         changeIcon: function () {
             if (this.value == 0) {
@@ -74,7 +75,7 @@ export default {
 .container {
     display: flex;
     flex-direction: column;
-    margin: 4rem;
+    margin: auto;
 }
 
 .first-question-box {
@@ -86,7 +87,8 @@ export default {
 
 .moodrange {
     margin: auto;
-    padding-top: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
     background-color: rgb(219, 189, 161);
     width: 20rem;
     height: 20rem;
@@ -109,7 +111,14 @@ figcaption {
 }
 
 .button {
+    display: flex;
+    flex: 2;
+    margin: auto;
     text-align: center;
+    max-width: 30rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 img {
