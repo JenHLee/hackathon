@@ -15,6 +15,8 @@
             </router-link>
             <router-view />
         </div>
+        {{ value }}
+        {{ emotion }}
     </div>
 </div>
 </template>
@@ -66,6 +68,7 @@ export default {
     display: flex;
     justify-content: center;
     align-content: center;
+    background-size: cover;
 }
 
 .container {

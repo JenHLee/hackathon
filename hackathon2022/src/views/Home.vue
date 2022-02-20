@@ -30,7 +30,7 @@ export default {
     };
   },
   mounted() {
-    setTimeout(() => (this.loadingOn = false), 3000);
+    setTimeout(() => (this.loadingOn = false), 4000);
   }
 };
 </script>
@@ -47,10 +47,11 @@ h2{
   box-sizing: border-box;
   height: 100vh;
   background: url("../img/bg-1.gif");
-  background-size: 100%;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-content: center;
+  background-repeat: no-repeat;
 }
 
 .main-writing {

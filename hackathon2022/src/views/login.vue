@@ -39,14 +39,14 @@ export default {
 
 <style scoped>
 .login {
-    box-sizing: border-box;
-
-    height: 100vh;
-    background: url("../img/bg-1.gif");
-    background-size: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+  box-sizing: border-box;
+  height: 100vh;
+  background: url("../img/bg-1.gif");
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-size: cover;
 }
 
 .main-writing {
