@@ -33,7 +33,6 @@ exports.quesById = (req,res,next, id) =>{
 exports.updateQuestion = (req,res,next) =>{
     
     let question = req.profile;
-    console.log(req.body)
     question = _.extend(question,req.body);
     question.save();
     res.json({answer: question.answer});
