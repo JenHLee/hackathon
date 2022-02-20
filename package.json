@@ -1,0 +1,30 @@
+{
+  "name": "hackathon",
+  "version": "1.0.0",
+  "description": "This is a mental app.",
+  "main": "app.js",
+  "scripts": {
+    "server": "nodemon server.js --ignore 'hackathon2022/'",
+    "hack": "npm run serve --prefix hackathon2022",
+    "dev": "concurrently \"npm run server\" \"npm run hack\"",
+    "start": "node app.js",
+    "build": "npm install --prefix hackathon2022 && npm run build --prefix hackathon2022"
+  },
+  "keywords": [
+    "node",
+    "api"
+  ],
+  "author": "Zhenrong Shi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7"
+  }
+}
