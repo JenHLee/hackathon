@@ -2,21 +2,19 @@
 <div class="first">
     <div class="container">
         <div class="first-qustion-box">
-            <h1>How are you today?</h1>
+            <h1>{{ name }} How are you today?</h1>
         </div>
         <div class="moodrange">
             <img :src="changeIcon(pic)" />
             <figcaption v-text="emotion"></figcaption>
             <input type="range" id="volume" name="volume" min="0" max="4" step="1" v-model="value" v-on:change="changeIcon" />
         </div>
-        <div class="button">
+        <div class="button" @click="update" :disabled="!emotion">
             <router-link to="/second-question">
                 <HelloWorld msg=">" />
             </router-link>
             <router-view />
         </div>
-        {{ value }}
-        {{ emotion }}
     </div>
 </div>
 </template>
@@ -24,7 +22,7 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
-
+import axios from "axios";
 export default {
     name: "first",
     components: {
@@ -34,25 +32,37 @@ export default {
         return {
             value: 2,
             emotion: "sdfsfs",
+            name: localStorage.username
+
+
         };
     },
-
     methods: {
+        async update(){
+            console.log(this.type);
+            const response = await axios.put("api/6211e5f3746a29fbd65ad678",{answer:this.type});
+            response.data = this.answer;
+        },
         changeIcon: function () {
             if (this.value == 0) {
                 this.emotion = "REALLY TERRIBLE";
+                this.type = "park";
                 return require("@/img/icon0.svg");
             } else if (this.value == 1) {
                 this.emotion = "SOMEWHAT BAD";
+                this.type = "cafe";
                 return require("@/img/icon25.svg");
             } else if (this.value == 2) {
+                this.type = "recreation_center";
                 this.emotion = "OKAY";
                 return require("@/img/icon50.svg");
             } else if (this.value == 3) {
                 this.emotion = "PRETTY GOOD";
+                this.type = "restaurant";
                 return require("@/img/icon75.svg");
             } else {
                 this.emotion = "SUPER AWESOME";
+                this.type = "finedining_restaurant";
                 return require("@/img/icon100.svg");
             }
         },

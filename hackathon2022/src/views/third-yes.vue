@@ -2,7 +2,7 @@
 <div class="third-yes">
     <div class="container">
         <div class="third-yes-qustion-box">
-            <h1>Would you like to elaborate on this?</h1>
+            <h1>{{ name }} Would you like to elaborate on this?</h1>
         </div>
         <div class="content">
             <textarea cols="0" rows="10" class="content-input" v-model="text"></textarea>
@@ -28,7 +28,15 @@ export default {
     components: {
         HelloWorld,
     },
+<<<<<<< HEAD
     
+=======
+    data() {
+    return {
+       name: localStorage.username
+    };
+  },
+>>>>>>> bba217b1ffd6fc73b71cc99595f4c2d388dab07b
 };
 </script>
 

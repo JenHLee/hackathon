@@ -3,7 +3,7 @@
     <div class="container">
         <div class="fifth-qustion-box">
             <h1>
-                Have you done anything specific to be mindful of what was happening today?
+                {{ name }} Have you done anything specific to be mindful of what was happening today?
             </h1>
             <div class="button-1">
                 <router-link to="/fifth-yes">
@@ -28,6 +28,11 @@ export default {
     components: {
         selectbutton,
     },
+    data() {
+    return {
+       name: localStorage.username
+    };
+  },
 };
 </script>
 

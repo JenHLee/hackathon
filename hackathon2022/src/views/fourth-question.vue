@@ -2,7 +2,7 @@
 <div class="fourth">
     <div class="container">
         <div class="fourth-qustion-box">
-            <h1>
+            <h1>{{ name }}
                 What happend at {{ fourthAnswerQuestion }}?<br>
                 Can you tell me more ?
             </h1>
@@ -29,6 +29,11 @@ export default {
     components: {
         selectbutton,
     },
+    data() {
+    return {
+       name: localStorage.username
+    };
+  },
 };
 </script>
 

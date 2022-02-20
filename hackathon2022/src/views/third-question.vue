@@ -2,7 +2,7 @@
 <div class="third">
     <div class="container">
         <div class="third-qustion-box">
-            <h1>Would you like to elaborate on this?</h1>
+            <h1>{{ name }} Would you like to elaborate on this?</h1>
             <div class="button-1">
                 <router-link to="/third-yes">
                     <selectbutton msg="YES" v-on:click="answer = true" />
@@ -24,6 +24,11 @@ import selectbutton from "@/components/selectbutton.vue";
 export default {
     name: "third",
     components: {selectbutton},
+    data() {
+    return {
+       name: localStorage.username
+    };
+  },
 };
 </script>
 

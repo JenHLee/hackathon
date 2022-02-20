@@ -2,7 +2,7 @@
 <div class="fifth-yes">
     <div class="container">
         <div class="fifth-yes-qustion-box">
-            <h1> Have you done anything specific to be mindful of what was happening today? </h1>
+            <h1> {{ name }} Have you done anything specific to be mindful of what was happening today? </h1>
         </div>
         <div class="content">
             <textarea cols="0" rows="10" class="content-input" v-model="text"></textarea>
@@ -27,6 +27,11 @@ export default {
     components: {
         HelloWorld,
     },
+    data() {
+    return {
+       name: localStorage.username
+    };
+  },
 };
 </script>
 
