@@ -56,7 +56,6 @@ export default {
 
 .second-qustion-box {
   text-align: center;
-  background-color: brown;
   flex: 4;
   width: 40rem;
   margin: auto;
@@ -66,7 +65,6 @@ export default {
   display: flex;
   flex: 2;
   margin: auto;
-  background-color: bisque;
   text-align: center;
   max-width: 30rem;
   flex-direction: row;
