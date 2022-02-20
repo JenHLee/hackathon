@@ -1,29 +1,22 @@
 <template>
-  <div class="first">
+<div class="first">
     <div class="container">
-      <div class="question">Welcome {{}}, how are you today?</div>
-      <div class="first-qustion-box">
-        <img :src="changeIcon(pic)" />
-        <figcaption v-text="emotion"></figcaption>
-        <input
-          type="range"
-          id="volume"
-          name="volume"
-          min="0"
-          max="4"
-          step="1"
-          v-model="value"
-          v-on:change="changeIcon"
-        />
-      </div>
-      <div class="button">
-        <router-link to="/second-question"
-          ><HelloWorld msg="Next"
-        /></router-link>
-        <router-view />
-      </div>
+        <div class="first-qustion-box">
+            <h1>Welcome{{}}, how are you today?</h1>
+        </div>
+        <div class="moodrange">
+            <img :src="changeIcon(pic)" />
+            <figcaption v-text="emotion"></figcaption>
+            <input type="range" id="volume" name="volume" min="0" max="4" step="1" v-model="value" v-on:change="changeIcon" />
+        </div>
+        <div class="button">
+            <router-link to="/second-question">
+                <HelloWorld msg="Next" />
+            </router-link>
+            <router-view />
+        </div>
     </div>
-  </div>
+</div>
 </template>
 
 <script>
@@ -31,78 +24,92 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-  name: "first",
-  components: {
-    HelloWorld,
-  },
-  data() {
-    return {
-      value: 3,
-      emotion: "sdfsfs",
-    };
-  },
-  methods: {
-    changeIcon: function () {
-      if (this.value == 0) {
-        this.emotion = "REALLY TERRIBLE";
-        return require("@/img/icon0.svg");
-      } else if (this.value == 1) {
-        this.emotion = "SOMEWHAT BAD";
-        return require("@/img/icon25.svg");
-      } else if (this.value == 2) {
-        this.emotion = "OKAY";
-        return require("@/img/icon50.svg");
-      } else if (this.value == 3) {
-        this.emotion = "PRETTY GOOD";
-        return require("@/img/icon75.svg");
-      } else {
-        this.emotion = "SUPER AWESOME";
-        return require("@/img/icon100.svg");
-      }
+    name: "first",
+    components: {
+        HelloWorld,
     },
-  },
+    data() {
+        return {
+            value: 3,
+            emotion: "sdfsfs",
+        };
+    },
+    methods: {
+        changeIcon: function () {
+            if (this.value == 0) {
+                this.emotion = "REALLY TERRIBLE";
+                return require("@/img/icon0.svg");
+            } else if (this.value == 1) {
+                this.emotion = "SOMEWHAT BAD";
+                return require("@/img/icon25.svg");
+            } else if (this.value == 2) {
+                this.emotion = "OKAY";
+                return require("@/img/icon50.svg");
+            } else if (this.value == 3) {
+                this.emotion = "PRETTY GOOD";
+                return require("@/img/icon75.svg");
+            } else {
+                this.emotion = "SUPER AWESOME";
+                return require("@/img/icon100.svg");
+            }
+        },
+    },
 };
 </script>
 
 <style scoped>
 .first {
-  box-sizing: border-box;
-  height: 100vh;
-  background: url("../img/bg-1.gif");
-  background-size: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+    box-sizing: border-box;
+    height: 100vh;
+    background: url("../img/bg-1.gif");
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .container {
-  margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 4rem;
 }
 
-.first-qustion-box {
-  text-align: center;
-  flex: 4;
+.first-question-box {
+    text-align: center;
+    flex: 4;
+    width: 40rem;
+    margin: auto;
+}
+
+.moodrange {
+    margin: auto;
+    padding-top: 5rem;
+    background-color: rgb(219, 189, 161);
+    width: 20rem;
+    height: 20rem;
+    border-radius: 5rem;
+    text-align: center;
+    flex: 4;
 }
 
 figcaption {
-  text-align: center;
+    text-align: center;
+    font-weight: bold;
 }
 
 #volume {
-  margin-top: 1rem;
+    margin-top: 1rem;
 }
 
 .question {
-  margin-bottom: 3rem;
+    margin-bottom: 3rem;
 }
 
 .button {
-  text-align: center;
-} 
-
-
-img {
-  width: 10rem;
+    text-align: center;
 }
 
+img {
+    width: 10rem;
+}
 </style>

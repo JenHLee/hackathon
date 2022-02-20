@@ -16,11 +16,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   button {
-    text-decoration: none;
     color: inherit;
     font-weight: bold;
-    color: white;
-    background-color: #020122;
+    color: #020122;
+    background-color:#f2f3ae;
     border: 0;
     border-radius: 30px;
     text-align: center;
@@ -28,7 +27,7 @@ export default {
     margin-top: 2rem;
   }
   button:hover {
-    background-color: #f2f3ae;
+    background-color:  #7ed0df;
     color: #020122;
   }
 </style>

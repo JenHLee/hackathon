@@ -4,6 +4,7 @@
 
 <style scoped>
   .icon {
+    display: flex;
     margin: auto;
   }
 </style>
