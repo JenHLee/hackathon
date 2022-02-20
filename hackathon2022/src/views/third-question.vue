@@ -29,8 +29,6 @@ export default {
 
 <style scoped>
 .third {
-<<<<<<< HEAD
-
   box-sizing: border-box;
   height: 100vh;
   background: url("../img/bg-1.gif");
@@ -39,23 +37,6 @@ export default {
   justify-content: center;
   align-content: center;
   background-size: cover;
-=======
-    box-sizing: border-box;
-    height: 100vh;
-    background: url("../img/bg-1.gif");
-    background-size: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    background-size: cover;
-    box-sizing: border-box;
-    height: 100vh;
-    background: url("../img/bg-1.gif");
-    background-size: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
->>>>>>> d0428651e1d086f5e5cb49a613b80a1d88e235a7
 }
 
 .container {
@@ -72,17 +53,11 @@ export default {
 }
 
 .button-1 {
-<<<<<<< HEAD
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 3rem;
-=======
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 3rem;
->>>>>>> d0428651e1d086f5e5cb49a613b80a1d88e235a7
+
 }
 
 .content {
@@ -128,12 +103,7 @@ export default {
 }
 
 #nextButton {
-<<<<<<< HEAD
   margin: auto;
 }
 
-=======
-    margin: auto;
-}
->>>>>>> d0428651e1d086f5e5cb49a613b80a1d88e235a7
 </style>
