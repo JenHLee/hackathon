@@ -3,19 +3,20 @@
     <div class="container">
       <div class="third-qustion-box">
         <h1>Would you like to elaborate on this?</h1>
-      </div>
-      <div class="content">
-        <textarea cols="0" rows="7" class="content-input"></textarea>
-      </div>
-      <div class="button">
-        <selectbutton msg="YES" v-on:click="answer = false" />
-        <selectbutton msg="NO" v-on:click="answer = true" />
-        <div>
-          <router-link to="/fourth-question"
-            ><HelloWorld msg="Next"
-          /></router-link>
-          <router-view />
+        <div class="button-1">
+          <selectbutton msg="YES" v-on:click="answer = true" />
+          <selectbutton msg="NO" v-on:click="answer = false" />
         </div>
+      </div>
+      <div class="content" v-if="answer"> 
+        <textarea cols="0" rows="7" class="content-input" v-model="text"></textarea>
+        <button class="submit-button" v-on:click="showNextButton()">submit</button>
+      </div>
+      <div id="nextButton" v-else>
+        <router-link to="/fourth-question"
+          ><HelloWorld msg="Next"
+        /></router-link>
+        <router-view />
       </div>
     </div>
   </div>
@@ -35,8 +36,13 @@ export default {
   data() {
     return {
       answer: false,
-      message: "",
+      message: ""
     };
+  },
+  mehotds: {
+    showNextButton: function() {
+      
+    }
   },
 };
 </script>
@@ -65,10 +71,17 @@ export default {
   margin: auto;
 }
 
+.button-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .content {
   background-color: bisque;
-  border-radius: .5rem;
-  padding: .75rem 1rem .25rem;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem 0.25rem;
+  text-align: right;
 }
 
 .content-input {
@@ -76,10 +89,8 @@ export default {
   background-color: bisque;
   border: none;
   outline: none;
-  padding: .25rem .5rem .5rem 0;
-
+  padding: 0.25rem 0.5rem 0.5rem 0;
 }
-
 
 .button {
   display: flex;
@@ -91,4 +102,27 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.submit-button {
+  text-decoration: none;
+  color: inherit;
+  color: white;
+  background: goldenrod;
+  border: 0;
+  border-radius: 10px;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+.submit-button:hover {
+  background-color: #f2f3ae;
+  color: #020122;
+}
+
+#nextButton {
+  margin: auto;
+}
+
 </style>
+
+ 
