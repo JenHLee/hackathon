@@ -1,12 +1,25 @@
 <template>
   <div class="first">
     <div class="container">
+      <div class="question">Welcome, {{}}, how are you today?</div>
       <div class="first-qustion-box">
         <img :src="changeIcon(pic)" />
-        <input type="range" id="volume" name="volume" min="0" max="4" step="1"  v-model="value" v-on:change="changeIcon"/>
+        <figcaption v-text="emotion"></figcaption>
+        <input
+          type="range"
+          id="volume"
+          name="volume"
+          min="0"
+          max="4"
+          step="1"
+          v-model="value"
+          v-on:change="changeIcon"
+        />
       </div>
       <div class="button">
-        <router-link to="/second-question"><HelloWorld msg="Next" /></router-link>
+        <router-link to="/second-question"
+          ><HelloWorld msg="Next"
+        /></router-link>
         <router-view />
       </div>
     </div>
@@ -24,24 +37,30 @@ export default {
   },
   data() {
     return {
-      value: 3
-    }
+      value: 3,
+      emotion: "sdfsfs",
+    };
   },
   methods: {
     changeIcon: function () {
       if (this.value == 0) {
-        return require('@/img/icon0.svg')
-      } else if (this.value == 1){
-        return require('@/img/icon25.svg')
-      } else if (this.value == 2){
-        return require('@/img/icon50.svg')
-      } else if (this.value == 3){
-        return require('@/img/icon75.svg')
+        this.emotion = "REALLY TERRIBLE";
+        return require("@/img/icon0.svg");
+      } else if (this.value == 1) {
+        this.emotion = "SOMEWHAT BAD";
+        return require("@/img/icon25.svg");
+      } else if (this.value == 2) {
+        this.emotion = "OKAY";
+        return require("@/img/icon50.svg");
+      } else if (this.value == 3) {
+        this.emotion = "PRETTY GOOD";
+        return require("@/img/icon75.svg");
       } else {
-        return require('@/img/icon100.svg')
+        this.emotion = "SUPER AWESOME";
+        return require("@/img/icon100.svg");
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -57,23 +76,33 @@ export default {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  margin: 4rem;
+  margin: auto;
 }
 
 .first-qustion-box {
-  background-color: brown;
+  text-align: center;
   flex: 4;
-  padding: 15vw;
 }
 
-.button {
-  flex: 2;
-  margin: 2rem;
-  background-color: bisque;
+figcaption {
   text-align: center;
 }
 
+#volume {
+  margin-top: 1rem;
+}
+
+.question {
+  margin-bottom: 3rem;
+}
+
+.button {
+  text-align: center;
+} 
+
+
+img {
+  width: 10rem;
+}
 
 </style>

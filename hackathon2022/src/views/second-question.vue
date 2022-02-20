@@ -31,7 +31,7 @@ export default {
   name: "Second",
   components: {
     selectbutton,
-    HelloWorld,
+    HelloWorld
   },
 };
 </script>
