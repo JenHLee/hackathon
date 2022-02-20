@@ -29,6 +29,7 @@ export default {
 
 <style scoped>
 .third {
+<<<<<<< HEAD
   box-sizing: border-box;
   height: 100vh;
   background: url("../img/bg-1.gif");
@@ -37,6 +38,17 @@ export default {
   justify-content: center;
   align-content: center;
   background-size: cover;
+=======
+    padding-top: 12%;
+    box-sizing: border-box;
+    height: 100vh;
+    background: url("../img/bg-1.gif");
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-size: cover;
+>>>>>>> 5b5b67d30da1884f3eca504ad81c1b945c1a8f7a
 }
 
 .container {
@@ -60,6 +72,7 @@ export default {
 
 }
 
+<<<<<<< HEAD
 .content {
     background-color: bisque;
     border-radius: 0.5rem;
@@ -106,4 +119,6 @@ export default {
   margin: auto;
 }
 
+=======
+>>>>>>> 5b5b67d30da1884f3eca504ad81c1b945c1a8f7a
 </style>
