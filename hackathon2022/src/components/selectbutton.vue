@@ -1,34 +1,34 @@
 <template>
-  <div class="hello">
+  <div class="selectbutton">
     <button>{{ msg }}</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "selectbutton",
   props: {
-    msg: String
+    msg: String,
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   button {
     text-decoration: none;
     color: inherit;
     font-weight: bold;
-    color: white;
-    background-color: #020122;
+    color: #191970;
+    background-color: #FFE4B5;
     border: 0;
     border-radius: 30px;
     text-align: center;
-    padding: 3vh 10vh;
-    margin-top: 2rem;
+    width: 10rem;
+    height: 3rem;
+    margin: 0.5rem;
   }
+
   button:hover {
-    background-color: #f2f3ae;
-    color: #020122;
+    background-color: #DAA520;
   }
 </style>

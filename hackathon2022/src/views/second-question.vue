@@ -2,15 +2,21 @@
   <div class="second">
     <div class="container">
       <div class="second-qustion-box">
-        <questionCard question="how is your day" />
+        <h1>Please, tell me what made you feel {{ firstAnswer }}</h1>
       </div>
       <div class="button">
-        <router-link to="/third-question"><HelloWorld msg="Next" /></router-link>
+        <selectbutton msg="WORK" />
+        <selectbutton msg="STUDIES" />
+        <selectbutton msg="RELATIONSHIP" />
+        <selectbutton msg="RELAXING" />
+        <selectbutton msg="MUSIC" />
+        <selectbutton msg="FOOD" />
+        <selectbutton msg="FRIENDS" />
+        <selectbutton msg="MORE" />
+        <router-link to="/third-question"
+          ><HelloWorld msg="Next"
+        /></router-link>
         <router-view />
-        <HelloWorld msg="Next" />
-        <HelloWorld msg="Next" />
-        <HelloWorld msg="Next" />
-        <HelloWorld msg="Next" />
       </div>
     </div>
   </div>
@@ -18,14 +24,14 @@
 
 <script>
 // @ is an alias to /src
+import selectbutton from "@/components/selectbutton.vue";
 import HelloWorld from "@/components/HelloWorld.vue";
-import questionCard from "@/components/questionCard.vue";
 
 export default {
   name: "Second",
   components: {
-    HelloWorld,
-    questionCard
+    selectbutton,
+    HelloWorld
   },
 };
 </script>
@@ -49,17 +55,21 @@ export default {
 }
 
 .second-qustion-box {
-  background-color: brown;
+  text-align: center;
   flex: 4;
-  padding: 15vw;
+  width: 40rem;
+  margin: auto;
 }
 
 .button {
+  display: flex;
   flex: 2;
-  margin: 2rem;
-  background-color: bisque;
+  margin: auto;
   text-align: center;
+  max-width: 30rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 
 </style>
