@@ -33,6 +33,7 @@ export default {
        name: localStorage.username
     };
   },
+
 };
 </script>
 

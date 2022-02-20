@@ -12,6 +12,7 @@
             </div>
         </div>
 </div>
+
 </template>
 
 <script>
@@ -38,7 +39,6 @@ export default {
             localStorage.username = newName
         }
     }
-
 };
 </script>
 

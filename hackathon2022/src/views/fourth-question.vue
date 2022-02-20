@@ -1,33 +1,33 @@
 <template>
-<div class="fourth">
-    <div class="container">
-        <div class="fourth-qustion-box">
-            <h1>{{ name }}
-                What happend at {{ fourthAnswerQuestion }}?<br>
-                Can you tell me more ?
-            </h1>
-            <div class="button-1">
-                <router-link to="/fourth-yes">
-                    <selectbutton msg="YES" v-on:click="answer = true" />
-                    </router-link>
-                    <router-link to="/fifth-question">
-                        <selectbutton msg="NO" v-on:click="answer = false" />
-                    </router-link>
-                    <router-view />
-            </div>
-        </div>
-    </div>
-</div>
+  <div class="fourth">
+      <div class="container">
+          <div class="fourth-qustion-box">
+              <h1>{{ name }}
+                  What happend at {{ fourthAnswerQuestion }}?<br>
+                  Can you tell me more ?
+              </h1>
+              <div class="button-1">
+                  <router-link to="/fourth-yes">
+                      <NextBtn msg="YES" v-on:click="answer = true" />
+                      </router-link>
+                      <router-link to="/fifth-question">
+                          <NextBtn msg="NO" v-on:click="answer = false" />
+                      </router-link>
+                      <router-view />
+              </div>
+          </div>
+      </div>
+  </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import selectbutton from "@/components/selectbutton.vue";
+import NextBtn from "@/components/NextBtn.vue";
 
 export default {
     name: "fourth",
     components: {
-        selectbutton,
+        NextBtn,
     },
     data() {
     return {
