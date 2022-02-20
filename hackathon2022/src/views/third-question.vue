@@ -1,29 +1,29 @@
 <template>
-<div class="third">
-    <div class="container">
-        <div class="third-qustion-box">
-            <h1>{{ name }} Would you like to elaborate on this?</h1>
-            <div class="button-1">
-                <router-link to="/third-yes">
-                    <selectbutton msg="YES" v-on:click="answer = true" />
-                </router-link>
-                <router-link to="/fourth-question">
-                    <selectbutton msg="NO" v-on:click="answer = false" />
-                </router-link>
-                <router-view />
-            </div>
-        </div>
-    </div>
-</div>
+  <div class="third">
+      <div class="container">
+          <div class="third-qustion-box">
+              <h1>{{ name }} Would you like to elaborate on this?</h1>
+              <div class="button-1">
+                  <router-link to="/third-yes">
+                      <NextBtn msg="YES" v-on:click="answer = true" />
+                  </router-link>
+                  <router-link to="/fourth-question">
+                      <NextBtn msg="NO" v-on:click="answer = false" />
+                  </router-link>
+                  <router-view />
+              </div>
+          </div>
+      </div>
+  </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import selectbutton from "@/components/selectbutton.vue";
+import NextBtn from "@/components/NextBtn.vue";
 
 export default {
     name: "third",
-    components: {selectbutton},
+    components: {NextBtn},
     data() {
     return {
        name: localStorage.username

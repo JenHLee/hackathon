@@ -5,10 +5,10 @@
             <h1>{{ name }} Would you like me to show you a special place that'll help you get calm and mindful at any moment?</h1>
             <div class="button-1">
                 <router-link to="/spot-1">
-                    <selectbutton msg="YES" v-on:click="answer = true" />
+                    <NextBtn msg="YES" v-on:click="answer = true" />
                 </router-link>
                 <router-link to="/final">
-                    <selectbutton msg="NO" v-on:click="answer = false" />
+                    <NextBtn msg="NO" v-on:click="answer = false" />
                 </router-link>
                 <router-view />
             </div>
@@ -19,12 +19,12 @@
 
 <script>
 // @ is an alias to /src
-import selectbutton from "@/components/selectbutton.vue";
+import NextBtn from "@/components/NextBtn.vue";
 
 export default {
     name: "six",
     components: {
-        selectbutton,
+        NextBtn,
     },
     data() {
         return {

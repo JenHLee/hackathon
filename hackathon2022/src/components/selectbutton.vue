@@ -1,5 +1,4 @@
 <template>
-
   <div class="selectbutton" v-on:click="() => $emit('change', emotion)">
     <button class="no" v-if="!emotion.answer">{{ emotion.type }}</button>
     <button class="yes" v-else>{{ emotion.type }}</button>
@@ -10,9 +9,7 @@
 export default {
   name: "selectbutton",
   props: {
-
     emotion: String,
-
   },
   
 };
