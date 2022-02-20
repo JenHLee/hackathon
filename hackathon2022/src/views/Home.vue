@@ -4,7 +4,7 @@
     <div v-else class="container">
       <div class="main-writing">
         <h1>MOOD SPOT</h1>
-        <h2>Check your mood, find your spot</h2>
+        <h2>Check Your Mood, Find Your Spot</h2>
       </div>
       <div class="button">
         <router-link to="/login"><HelloWorld msg="Start" /></router-link>
@@ -36,6 +36,13 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  font-size: 8vw;
+  font-weight: bold;
+}
+h2{
+  font-size: 2vw;
+}
 .home {
   box-sizing: border-box;
   height: 100vh;

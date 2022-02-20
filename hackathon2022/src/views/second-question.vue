@@ -1,25 +1,28 @@
 <template>
-  <div class="second">
+<div class="second">
     <div class="container">
-      <div class="second-qustion-box">
-        <h1>Please, tell me what made you feel {{ firstAnswer }}</h1>
-      </div>
-      <div class="button">
-        <selectbutton msg="WORK" />
-        <selectbutton msg="STUDIES" />
-        <selectbutton msg="RELATIONSHIP" />
-        <selectbutton msg="RELAXING" />
-        <selectbutton msg="MUSIC" />
-        <selectbutton msg="FOOD" />
-        <selectbutton msg="FRIENDS" />
-        <selectbutton msg="MORE" />
-        <router-link to="/third-question"
-          ><HelloWorld msg="Next"
-        /></router-link>
-        <router-view />
-      </div>
+        <div class="second-qustion-box">
+            <h1>Please, tell me what made your feelling.</h1>
+        </div>
+        <div class="imgbox">
+            <img src="../img/c-img1.gif" class="c-img" />
+        </div>
+        <div class="button">
+            <selectbutton msg="WORK" />
+            <selectbutton msg="STUDIES" />
+            <selectbutton msg="RELATIONSHIP" />
+            <selectbutton msg="RELAXING" />
+            <selectbutton msg="MUSIC" />
+            <selectbutton msg="FOOD" />
+            <selectbutton msg="FRIENDS" />
+            <selectbutton msg="MORE" />
+            <router-link to="/third-question">
+                <HelloWorld msg="Next" />
+            </router-link>
+            <router-view />
+        </div>
     </div>
-  </div>
+</div>
 </template>
 
 <script>
@@ -28,17 +31,17 @@ import selectbutton from "@/components/selectbutton.vue";
 import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-  name: "Second",
-  components: {
-    selectbutton,
-    HelloWorld
-  },
+    name: "Second",
+    components: {
+        selectbutton,
+        HelloWorld
+    },
 };
 </script>
 
 <style scoped>
-
 .second {
+<<<<<<< HEAD
   box-sizing: border-box;
   height: 100vh;
   background: url("../img/bg-1.gif");
@@ -47,30 +50,47 @@ export default {
   justify-content: center;
   align-content: center;
   background-size: cover;
+=======
+    box-sizing: border-box;
+    height: 100vh;
+    background: url("../img/bg-1.gif");
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+>>>>>>> 90d39548b592219636d640f3f7cca165e93e5afd
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  margin: 4rem;
+    display: flex;
+    flex-direction: column;
+    margin: 4rem;
 }
 
 .second-qustion-box {
-  text-align: center;
-  flex: 4;
-  width: 40rem;
+    text-align: center;
+    flex: 4;
+    width: 40rem;
+    margin: auto;
+}
+.imgbox{
   margin: auto;
+  display: flex;
+  align-items: center;
+  
+}
+.c-img {
+    width: 20rem;
 }
 
 .button {
-  display: flex;
-  flex: 2;
-  margin: auto;
-  text-align: center;
-  max-width: 30rem;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex: 2;
+    margin: auto;
+    text-align: center;
+    max-width: 30rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
 </style>
