@@ -34,29 +34,35 @@ export default {
             emotion: "sdfsfs",
             name: localStorage.username
 
+
         };
     },
-
     methods: {
         async update(){
-            const response = await axios.put("api/6211e5f3746a29fbd65ad678",{answer:this.emotion});
+            console.log(this.type);
+            const response = await axios.put("api/6211e5f3746a29fbd65ad678",{answer:this.type});
             response.data = this.answer;
         },
         changeIcon: function () {
             if (this.value == 0) {
                 this.emotion = "REALLY TERRIBLE";
+                this.type = "park";
                 return require("@/img/icon0.svg");
             } else if (this.value == 1) {
                 this.emotion = "SOMEWHAT BAD";
+                this.type = "cafe";
                 return require("@/img/icon25.svg");
             } else if (this.value == 2) {
+                this.type = "recreation_center";
                 this.emotion = "OKAY";
                 return require("@/img/icon50.svg");
             } else if (this.value == 3) {
                 this.emotion = "PRETTY GOOD";
+                this.type = "restaurant";
                 return require("@/img/icon75.svg");
             } else {
                 this.emotion = "SUPER AWESOME";
+                this.type = "finedining_restaurant";
                 return require("@/img/icon100.svg");
             }
         },

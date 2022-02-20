@@ -4,7 +4,9 @@
       <div class="spot-2-question-box">
         <h1>This is your MOODSPOT.</h1>
         
-        <div id="spotCard"></div>
+        <div id="spotCard">
+          <p>{{spot.name}}</p>
+        </div>
       </div>
      <div class="button" type="submit">
             <router-link to="/spot-3">
@@ -18,12 +20,27 @@
 <script>
 // @ is an alias to /src
 import spotBtn from "@/components/spotBtn.vue";
-
+import axios from "axios";
 export default {
     name: "spot-2",
     components: {
         spotBtn,
     },
+    data() {
+        return {
+            spots:[],
+            spot: ""
+        };
+    },
+    async mounted(){
+        const response = await axios.get("api/allspots");
+        this.spots = response.data;
+        this.spot = this.spots[1];
+        console.log(this.spot);
+    },
+    methods:{
+
+    }
 };
 </script>
 <style scoped>
