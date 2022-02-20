@@ -42,6 +42,7 @@ export default {
             console.log(this.type);
             const response = await axios.put("api/6211e5f3746a29fbd65ad678",{answer:this.type});
             response.data = this.answer;
+            console.log(this.answer);
         },
         changeIcon: function () {
             if (this.value == 0) {

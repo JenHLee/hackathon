@@ -18,8 +18,8 @@
         </div>
       </div>
   <div class="button" type="submit">
-            <router-link to="/spot-4">
-            <spotBtn msg="Another Recommendation"/>
+            <router-link to="/final">
+            <spotBtn msg="Finish the MOODSPOT"/>
             </router-link>
         </div>
     </div>
@@ -31,7 +31,7 @@
 import spotBtn from "@/components/spotBtn.vue";
 import axios from "axios";
 export default {
-    name: "spot-1",
+    name: "spot-3",
     components: {
         spotBtn,
     },

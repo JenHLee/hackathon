@@ -45,7 +45,6 @@ export default {
          {type:"RELAXING", answer: false},
          {type:"MUSIC", answer: false},
          {type:"FOOD", answer: false},
-         {type:"FRIENDS", answer: false},
          {type:"FRIENDS", answer: false}
         ]
     };
