@@ -4,19 +4,18 @@
       <div class="third-qustion-box">
         <h1>Would you like to elaborate on this?</h1>
       </div>
+      <div class="content">
+        <textarea cols="0" rows="7" class="content-input"></textarea>
+      </div>
       <div class="button">
-        <selectbutton msg="WORK" />
-        <selectbutton msg="STUDIES" />
-        <selectbutton msg="RELATIONSHIP" />
-        <selectbutton msg="RELAXING" />
-        <selectbutton msg="MUSIC" />
-        <selectbutton msg="FOOD" />
-        <selectbutton msg="FRIENDS" />
-        <selectbutton msg="MORE" />
-        <router-link to="/fourth-question"
-          ><HelloWorld msg="Next"
-        /></router-link>
-        <router-view />
+        <selectbutton msg="YES" v-on:click="answer = false" />
+        <selectbutton msg="NO" v-on:click="answer = true" />
+        <div>
+          <router-link to="/fourth-question"
+            ><HelloWorld msg="Next"
+          /></router-link>
+          <router-view />
+        </div>
       </div>
     </div>
   </div>
@@ -33,11 +32,16 @@ export default {
     selectbutton,
     HelloWorld,
   },
+  data() {
+    return {
+      answer: false,
+      message: "",
+    };
+  },
 };
 </script>
 
 <style scoped>
-
 .third {
   box-sizing: border-box;
   height: 100vh;
@@ -61,6 +65,22 @@ export default {
   margin: auto;
 }
 
+.content {
+  background-color: bisque;
+  border-radius: .5rem;
+  padding: .75rem 1rem .25rem;
+}
+
+.content-input {
+  width: 100%;
+  background-color: bisque;
+  border: none;
+  outline: none;
+  padding: .25rem .5rem .5rem 0;
+
+}
+
+
 .button {
   display: flex;
   flex: 2;
@@ -71,5 +91,4 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 }
-
 </style>

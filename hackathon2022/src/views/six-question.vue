@@ -7,7 +7,7 @@
       <div class="button">
         <selectbutton msg="Yes" />
         <selectbutton msg="No" />
-        <router-link to="/seven-question"><HelloWorld msg="Next"/></router-link>
+        <router-link to="/spotRecommendation"><HelloWorld msg="Next"/></router-link>
         <router-view />
       </div>
     </div>

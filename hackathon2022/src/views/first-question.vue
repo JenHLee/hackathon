@@ -1,7 +1,7 @@
 <template>
   <div class="first">
     <div class="container">
-      <div class="question">Welcome, {{}}, how are you today?</div>
+      <div class="question">Welcome {{}}, how are you today?</div>
       <div class="first-qustion-box">
         <img :src="changeIcon(pic)" />
         <figcaption v-text="emotion"></figcaption>
