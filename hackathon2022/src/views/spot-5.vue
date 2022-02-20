@@ -4,7 +4,10 @@
       <div class="spot-5-question-box">
         <h1>This is your MOODSPOT.</h1>
         
-        <div id="spotCard">
+        <div v-if="spot.type === ''" id="spotCard" >
+          <p>There is no more</p>
+        </div>
+        <div v-else id="spotCard">
           <img v-if="spot.type === 'park'" src="../img/Verysad1.gif" alt="">
           <img v-else-if="spot.type === 'cafe'" src="../img/Blue1.gif" alt="">
           <img v-else-if="spot.type === 'recreation_center'" src="../img/Soso1.gif" alt="">
@@ -12,10 +15,10 @@
           <img v-else-if="spot.type === 'finedining_restaurant'" src="../img/Happy1.gif" alt="">
           <img v-else src="" alt="">
           
-          <p>{{spot.name}}</p><br>
-          <p>{{spot.address}}</p><br>
-          <p>{{spot.description}}</p><br>
-          <p>{{spot.message}}</p><br>
+          <p>Name: {{spot.name}}</p>
+          <p>Address: {{spot.address}}</p>
+          <p>Description: {{spot.description}}</p>
+          <p>Tips: {{spot.message}}</p>
         </div>
       </div>
      <div class="button" type="submit">

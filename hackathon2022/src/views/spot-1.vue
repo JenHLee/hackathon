@@ -11,10 +11,10 @@
           <img v-else-if="spot.type === 'restaurant'" src="../img/Good1.gif" alt="">
           <img v-else-if="spot.type === 'finedining_restaurant'" src="../img/Happy1.gif" alt="">
           
-          <p>{{spot.name}}</p><br>
-          <p>{{spot.address}}</p><br>
-          <p>{{spot.description}}</p><br>
-          <p>{{spot.message}}</p><br>
+          <p>Name: {{spot.name}}</p>
+          <p>Address: {{spot.address}}</p>
+          <p>Description: {{spot.description}}</p>
+          <p>Tips: {{spot.message}}</p>
         </div>
       </div>
        <div class="button" type="submit">
@@ -38,8 +38,8 @@ export default {
     data() {
         return {
             spots:[],
-            spot: "",
-            url:""
+            spot: ""
+            
         };
     },
     async mounted(){
@@ -47,18 +47,7 @@ export default {
         this.spots = response.data;
         this.spot = this.spots[0];
         console.log(this.spot);
-        if(this.spot.type === "park"){
-          this.url = "../img/Verysad-flanders_Park.gif"
-        }else if(this.spot.type === "cafe"){
-          this.url = "../img/Blue-alchemist_Inc.gif"
-        }else if(this.spot.type === "recreation_center"){
-          this.url = "../img/Soso-Glenmore_Sailing_School.gif"
-        }else if(this.spot.type === "restaurant"){
-          this.url = "../img/Good-Boogie.gif"
-        }else if(this.spot.type === "finedining_restaurant"){
-          this.url = "../img/Happy-Ari.gif"
-        }
-        console.log(this.url);
+        
     },
     methods:{
         
