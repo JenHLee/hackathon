@@ -1,48 +1,63 @@
 <template>
-<div class="fianl">
+<div class="final">
     <div class="container">
-        <div class="final-qustion-box">
-            <h1>Please, tell me what made your feelling.</h1>
-        </div>
-        <div class="imgbox">
-            <img src="../img/c-img1.gif" class="c-img" />
+        <div class="main-writing">
+            <h1>Bye {{ name }},</h1>
+            <h2>Hope you have a wonderful day!</h2>
         </div>
     </div>
 </div>
 </template>
+<script>
+export default {
+    name: "final",
+    data() {
+        return {
+            name: localStorage.username
+        };
+    },
+}
+</script>>
 
 <style scoped>
-.second {
+h1 {
+    font-size: 8vw;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+.final {
     box-sizing: border-box;
     height: 100vh;
     background: url("../img/bg-1.gif");
-    background-size: 100%;
-    display: flex;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-repeat: no-repeat;
+}
+
+.main-writing {
+    text-align: center;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    margin: auto;
-    padding-left: 28%;
+    margin: 4rem;
 }
 
-.second-qustion-box {
-    text-align: center;
+.home-image {
     flex: 4;
-    width: 40rem;
-    margin: auto;
+    padding: 15vw;
 }
 
-.imgbox {
-    margin: auto;
-    display: flex;
-    align-items: center;
+.button {
+    flex: 2;
+    margin: 2rem;
+    text-align: center;
 }
-
-.c-img {
-    width: 20rem;
-}
-
 </style>

@@ -6,9 +6,14 @@
         <h1>MOOD SPOT</h1>
         <h2>Check Your Mood, Find Your Spot</h2>
       </div>
-      <div class="button">
+      <div class="button" v-if="userNameRegistered()">
         <router-link to="/login"><NextBtn msg="START" /></router-link>
       </div>
+      <div class="button" v-else>
+        <router-link to="/first-question"><NextBtn msg="START" /></router-link>
+        <NextBtn msg="Remove" v-on:click="remove" />
+      </div>
+      
     </div>
   </div>
 </template>
@@ -31,7 +36,21 @@ export default {
   },
   mounted() {
     setTimeout(() => (this.loadingOn = false), 4000);
-  }
+  },
+  methods: {
+    userNameRegistered: function () {
+      console.log("test");
+      if (localStorage.getItem("username") === null) {
+        console.log("test");
+        return true;
+      } else {
+        return false;
+        }
+    },
+    remove: function (){
+        localStorage.removeItem("username");
+      }
+    }
 };
 </script>
 

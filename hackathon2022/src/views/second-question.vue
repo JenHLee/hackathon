@@ -2,7 +2,7 @@
   <div class="second">
     <div class="container">
       <div class="second-qustion-box">
-        <h1>Please, tell me what made your feelling.</h1>
+        <h1>{{ name }} Please, tell me what made your feelling.</h1>
       </div>
       <div class="imgbox">
         <img src="../img/c-img1.gif" class="c-img" />
@@ -39,7 +39,9 @@ export default {
     HelloWorld,
   },
   data() {
-    return {};
+    return {
+       name: localStorage.username
+    };
   },
 };
 </script>
