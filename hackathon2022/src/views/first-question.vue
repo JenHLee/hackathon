@@ -9,14 +9,12 @@
             <figcaption v-text="emotion"></figcaption>
             <input type="range" id="volume" name="volume" min="0" max="4" step="1" v-model="value" v-on:change="changeIcon" />
         </div>
-        <div class="button">
+        <div class="button" @click="update" :disabled="!emotion">
             <router-link to="/second-question">
                 <HelloWorld msg=">" />
             </router-link>
             <router-view />
         </div>
-        {{ value }}
-        {{ emotion }}
     </div>
 </div>
 </template>
@@ -24,7 +22,7 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
-
+import axios from "axios";
 export default {
     name: "first",
     components: {
@@ -35,10 +33,15 @@ export default {
             value: 2,
             emotion: "sdfsfs",
             name: localStorage.username
+
         };
     },
 
     methods: {
+        async update(){
+            const response = await axios.put("api/6211e5f3746a29fbd65ad678",{answer:this.emotion});
+            response.data = this.answer;
+        },
         changeIcon: function () {
             if (this.value == 0) {
                 this.emotion = "REALLY TERRIBLE";
