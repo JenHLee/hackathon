@@ -1,10 +1,13 @@
 <template>
   <div class="home">
-    <div class="container">
-      <div class="home-image">
+    <loading v-if="loadingOn" />
+    <div v-else class="container">
+      <div class="main-writing">
+        <h1>MOOD SPOT</h1>
+        <h2>Check your mood, find your spot</h2>
       </div>
       <div class="button">
-        <router-link to="/first-question"><HelloWorld msg="Start" /></router-link>
+        <router-link to="/login"><HelloWorld msg="Start" /></router-link>
       </div>
     </div>
   </div>
@@ -13,13 +16,22 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
-
+import loading from "@/components/loading.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    HelloWorld,
+    loading,
   },
+  data() {
+    return {
+      loadingOn: true,
+    };
+  },
+  mounted() {
+    setTimeout(() => (this.loadingOn = false), 3000);
+  }
 };
 </script>
 
@@ -34,6 +46,10 @@ export default {
   align-content: center;
 }
 
+.main-writing {
+  text-align: center;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -41,7 +57,6 @@ export default {
 }
 
 .home-image {
-  background-color: brown;
   flex: 4;
   padding: 15vw;
 }
@@ -49,7 +64,6 @@ export default {
 .button {
   flex: 2;
   margin: 2rem;
-  background-color: bisque;
   text-align: center;
 }
 </style>
