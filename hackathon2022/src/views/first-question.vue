@@ -74,4 +74,6 @@ export default {
   background-color: bisque;
   text-align: center;
 }
+
+
 </style>
