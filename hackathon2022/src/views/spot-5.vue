@@ -15,10 +15,10 @@
           <img v-else-if="spot.type === 'finedining_restaurant'" src="../img/Happy1.gif" alt="">
           <img v-else src="" alt="">
           
-          <p>Name: {{spot.name}}</p>
-          <p>Address: {{spot.address}}</p>
-          <p>Description: {{spot.description}}</p>
-          <p>Tips: {{spot.message}}</p>
+          <h1>Name: {{spot.name}}</h1>
+          <h2>Address: {{spot.address}}</h2>
+          <h2>Description: {{spot.description}}</h2>
+          <h3>Tips: {{spot.message}}</h3>
         </div>
       </div>
      <div class="button" type="submit">
