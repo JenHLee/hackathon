@@ -1,7 +1,7 @@
 const express = require('express');
-const {createSpot,deleteSpot,getSpots,spotById} = require("../controllers/spot");
+const {createSpot,deleteSpot,getSpotsByType,spotById} = require("../controllers/spot");
 const router = express.Router();
-router.get('/api/allspots',getSpots);
+router.get('/api/allspots',getSpotsByType);
 router.post('/api/newspot',createSpot);
 router.delete('/api/:spotId',deleteSpot);
 

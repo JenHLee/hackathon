@@ -5,12 +5,21 @@ const spotSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    address:{
-        type:Number,
+    type:{
+        type:String,
         required: true
     },
     description:{
-        type:String
+        type:String,
+        required: true
+    },
+    address:{
+        type:String,
+        required: true
+    },
+    message:{
+        type:String,
+        required: true
     }
     
 });

@@ -1,14 +1,20 @@
-const Spot = require('../models/Spot');
+const Spot = require('../models/spot');
+const Question = require('../models/question');
 
-exports.getSpots = (req,res)=>{
-    const Spots = Spot.find().select("Qnum Spot answer")
-    .then((Spots)=>{
-        res.json({Spots});
-    }).catch(err => console.log(err));
+exports.getSpotsByType = async (req,res)=>{
+    try {
+        let question = await Question.find({"Qnum":"1"});
+        const answer = question[0].answer;
+        console.log(answer);
+        const spots = await Spot.find({type: answer});
+        res.json(spots);
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
 }
 exports.createSpot = (req,res, next) => {
-    const Spot = new Spot(req.body);
-    Spot.save();
+    const spot = new Spot(req.body);
+    spot.save();
     res.status(200).json({message:"Spot created!"});
 }
 exports.spotById = (req,res,next, id) =>{
