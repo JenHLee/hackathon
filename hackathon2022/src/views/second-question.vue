@@ -2,21 +2,26 @@
   <div class="second">
     <div class="container">
       <div class="second-qustion-box">
-        <h1>{{ name }} Please, tell me what made your feelling.</h1>
+        <h1>Please, tell me what made your feelling.</h1>
       </div>
       <div class="imgbox">
         <img src="../img/c-img1.gif" class="c-img" />
       </div>
       <div class="button">
-        <selectbutton
-          v-for="firstChoice in firstChoices"
-          :key="firstChoice"
-          :firstChoice="firstChoice"
-        />
+        <selectbutton msg="WORK" />
+        <selectbutton msg="STUDIES" />
+        <selectbutton msg="RELATIONSHIP" />
+        <selectbutton msg="RELAXING" />
+        <selectbutton msg="MUSIC" />
+        <selectbutton msg="FOOD" />
+        <selectbutton msg="FRIENDS" />
+        <selectbutton msg="MORE" />
       </div>
     </div>
     <div class="button">
-      <router-link to="/third-question"><HelloWorld msg=">" /></router-link>
+      <router-link to="/third-question">
+        <HelloWorld msg=">" />
+      </router-link>
       <router-view />
     </div>
   </div>
@@ -34,24 +39,8 @@ export default {
     HelloWorld,
   },
   data() {
-    return {
-      firstChoices: [
-        { name: "HAPPY" },
-        { name: "UPSET" },
-        { name: "POSITIVE" },
-        { name: "TIRED" },
-        { name: "CALM" },
-        { name: "STRESSED" },
-      ],
-      name: "",
-    };
+    return {};
   },
-  mounted() {
-    if (localStorage.name) {
-      this.name = localStorage.getItem('name');
-      console.log('now pretend I did more stuff...');
-    }
-  }
 };
 </script>
 
@@ -71,6 +60,7 @@ export default {
   margin: auto;
   padding-left: 28%;
 }
+
 
 .second-qustion-box {
   text-align: center;
