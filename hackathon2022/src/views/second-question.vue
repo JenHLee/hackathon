@@ -8,14 +8,12 @@
         <img src="../img/c-img1.gif" class="c-img" />
       </div>
       <div class="button">
-        <selectbutton msg="WORK" />
-        <selectbutton msg="STUDIES" />
-        <selectbutton msg="RELATIONSHIP" />
-        <selectbutton msg="RELAXING" />
-        <selectbutton msg="MUSIC" />
-        <selectbutton msg="FOOD" />
-        <selectbutton msg="FRIENDS" />
-        <selectbutton msg="MORE" />
+        <selectbutton
+          v-for="emotion in emotions"
+          :key="emotion"
+          :emotion="emotion"
+          v-on:click="answerButton()"
+        />
       </div>
     </div>
     <div class="button">
@@ -40,9 +38,18 @@ export default {
   },
   data() {
     return {
-       name: localStorage.username
+       name: localStorage.username,
+       emotions: [
+         {type: "WORK"},
+         {type: "STUDY"},
+         {type:"RELAXING"},
+         {type:"MUSIC"},
+         {type:"FOOD"},
+         {type:"FRIENDS"},
+         {type:"FRIENDS"}
+        ]
     };
-  },
+  }
 };
 </script>
 

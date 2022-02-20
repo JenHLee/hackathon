@@ -1,6 +1,6 @@
 <template>
   <div class="selectbutton">
-    <button>{{ msg }}</button>
+    <button>{{ emotion.type }}</button>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   name: "selectbutton",
   props: {
-    msg: String,
+    emotion: String,
   },
 };
 </script>
