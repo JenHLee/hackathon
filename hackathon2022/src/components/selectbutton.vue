@@ -11,36 +11,35 @@ export default {
   props: {
     emotion: String,
   },
-  
 };
 </script>
 
 <style scoped>
-  .no {
-    text-decoration: none;
-    color: inherit;
-    font-weight: bold;
-    color: #191970;
-    background-color: #FFE4B5;
-    border: 0;
-    border-radius: 30px;
-    text-align: center;
-    width: 10rem;
-    height: 3rem;
-    margin: 0.5rem;
-  }
+.no {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  color: #191970;
+  background-color: #ffe4b5;
+  border: 0;
+  border-radius: 30px;
+  text-align: center;
+  width: 10rem;
+  height: 3rem;
+  margin: 0.5rem;
+}
 
-  .yes {
-    background-color: #DAA520;
-    border: 0;
-    border-radius: 30px;
-    text-align: center;
-    width: 10rem;
-    height: 3rem;
-    margin: 0.5rem;
-    text-decoration: none;
-    color: inherit;
-    font-weight: bold;
-    color: #191970;
-  }
+.yes {
+  background-color: #daa520;
+  border: 0;
+  border-radius: 30px;
+  text-align: center;
+  width: 10rem;
+  height: 3rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  color: #191970;
+}
 </style>

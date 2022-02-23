@@ -2,8 +2,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 
 const routes = [
-
-
   {
     path: "/",
     name: "Home",
@@ -63,16 +61,16 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/fourth-question.vue"),
   },
-  
+
   {
-  path: "/fourth-yes",
-  name: "fourth-yes",
-  // route level code-splitting
-  // this generates a separate chunk (about.[hash].js) for this route
-  // which is lazy-loaded when the route is visited.
-  component: () =>
-    import(/* webpackChunkName: "about" */ "../views/fourth-yes.vue"),
-},
+    path: "/fourth-yes",
+    name: "fourth-yes",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/fourth-yes.vue"),
+  },
 
   {
     path: "/fifth-question",
@@ -83,7 +81,7 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/fifth-question.vue"),
   },
-  
+
   {
     path: "/fifth-yes",
     name: "fifth-yes",

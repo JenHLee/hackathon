@@ -5,7 +5,8 @@
       <div class="main-writing">
         <h1>MOOD SPOT</h1>
         <h2 v-if="userNameRegistered()">HELLO</h2>
-        <h2 v-else>{{ name }}</h2>        <h2>Check Your Mood, Find Your Spot</h2>
+        <h2 v-else>{{ name }}</h2>
+        <h2>Check Your Mood, Find Your Spot</h2>
       </div>
       <div class="button" v-if="userNameRegistered()">
         <router-link to="/login"><NextBtn msg="START" /></router-link>
@@ -14,7 +15,6 @@
         <router-link to="/first-question"><NextBtn msg="START" /></router-link>
         <NextBtn msg="Remove" v-on:click="remove" />
       </div>
-      
     </div>
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
   data() {
     return {
       loadingOn: true,
-      name: "HELLO " + localStorage.username 
+      name: "HELLO " + localStorage.username,
     };
   },
   mounted() {
@@ -47,12 +47,12 @@ export default {
         return true;
       } else {
         return false;
-        }
-    },
-    remove: function (){
-        localStorage.removeItem("username");
       }
-    }
+    },
+    remove: function () {
+      localStorage.removeItem("username");
+    },
+  },
 };
 </script>
 
@@ -61,7 +61,7 @@ h1 {
   font-size: 8vw;
   font-weight: bold;
 }
-h2{
+h2 {
   font-size: 2vw;
 }
 .home {
@@ -96,4 +96,3 @@ h2{
   text-align: center;
 }
 </style>
-

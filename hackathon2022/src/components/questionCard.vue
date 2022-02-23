@@ -13,14 +13,9 @@
 export default {
   name: "qustionCard",
   props: {
-    question: String
+    question: String,
   },
 };
 </script>
 
-<style scoped>
-
-
-
-
-</style>
+<style scoped></style>

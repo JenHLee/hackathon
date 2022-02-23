@@ -38,23 +38,23 @@ export default {
   },
   data() {
     return {
-       name: localStorage.username,
-       emotions: [
-         {type: "WORK", answer: false},
-         {type: "STUDY", answer: false},
-         {type:"RELAXING", answer: false},
-         {type:"MUSIC", answer: false},
-         {type:"FOOD", answer: false},
-         {type:"FRIENDS", answer: false},
-         {type:"FRIENDS", answer: false}
-        ]
+      name: localStorage.username,
+      emotions: [
+        { type: "WORK", answer: false },
+        { type: "STUDY", answer: false },
+        { type: "RELAXING", answer: false },
+        { type: "MUSIC", answer: false },
+        { type: "FOOD", answer: false },
+        { type: "FRIENDS", answer: false },
+        { type: "FRIENDS", answer: false },
+      ],
     };
   },
   methods: {
-    changeColor: function(emotion) {
-      emotion.answer = !emotion.answer
-    }
-  }
+    changeColor: function (emotion) {
+      emotion.answer = !emotion.answer;
+    },
+  },
 };
 </script>
 
@@ -74,7 +74,6 @@ export default {
   margin: auto;
   padding-left: 28%;
 }
-
 
 .second-qustion-box {
   text-align: center;
@@ -101,6 +100,4 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 }
-
-
 </style>
