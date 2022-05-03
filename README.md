@@ -21,4 +21,4 @@
 <div align="center">
   <a href="https://www.youtube.com/watch?v=Brd2TKKk9GM"><img src="hackathon2022/src/img/mainphoto.png" alt="IMAGE ALT TEXT"></a>
 </div>
-Click on the image to go to Youtube Demo
+:point_up_2: Click on the image to go to Youtube Demo
