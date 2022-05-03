@@ -17,8 +17,6 @@
 - mongoDB
 - Node.js
 
-
-
 <div align="center">
   <a href="https://www.youtube.com/watch?v=Brd2TKKk9GM"><img src="hackathon2022/src/img/mainphoto.png" alt="IMAGE ALT TEXT"></a>
 </div>
