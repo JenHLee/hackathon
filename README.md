@@ -18,8 +18,6 @@
 - Node.js
 
 ## :computer: Live Demo
-<div align="center">
-  ![moodspot (1)](https://user-images.githubusercontent.com/97131199/168886486-15c04e35-1a8d-4fe5-90c2-c57c5488bace.gif)
-  
-  https://www.youtube.com/watch?v=Brd2TKKk9GM
+![moodspot](https://user-images.githubusercontent.com/97131199/168886674-a66bd60b-feb7-4ef5-9b83-1a5d1554a921.gif)
+https://www.youtube.com/watch?v=Brd2TKKk9GM
 :point_up_2: Click on the image to go to Youtube Demo
