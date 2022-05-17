@@ -20,5 +20,6 @@
 ## :computer: Live Demo
 <div align="center">
   ![moodspot (1)](https://user-images.githubusercontent.com/97131199/168886486-15c04e35-1a8d-4fe5-90c2-c57c5488bace.gif)
+  
   https://www.youtube.com/watch?v=Brd2TKKk9GM
 :point_up_2: Click on the image to go to Youtube Demo
