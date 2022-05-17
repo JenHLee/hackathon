@@ -20,5 +20,5 @@
 ## :computer: Live Demo
 ![moodspot](https://user-images.githubusercontent.com/97131199/168886674-a66bd60b-feb7-4ef5-9b83-1a5d1554a921.gif)
  <br>
-https://www.youtube.com/watch?v=Brd2TKKk9GM
+https://www.youtube.com/watch?v=Brd2TKKk9GM <br>
 :point_up_2: Click on the image to go to Youtube Demo
